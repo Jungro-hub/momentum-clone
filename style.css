@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Jua", sans-serif;
+  letter-spacing: 0.15em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+.hide {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+.js-clock > h1 {
+  width: 300px;
+  margin: 30px auto 10px;
+  font-size: 50px;
+  text-align: center;
+}
+.analog {
+  margin: 0px auto 50px;
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  box-shadow: inset 1px 1px 3px 1.5px;
+  overflow: hidden;
+}
+.hour {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 5px;
+  background-color: #333333;
+
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.minute {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 3px;
+  background-color: #333333;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.second {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  background-color: #333333;
+
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.js-form {
+  width: 300px;
+  margin: auto;
+}
+
+.js-toDoForm {
+  width: 300px;
+  margin: auto;
+  padding: 30px;
+}
+
+.js-toDoForm > input {
+  width: 240px;
+  height: 100px;
+}
+
+.js-toDoList {
+  width: 500px;
+  margin: auto;
+  font-size: 24px;
+}
+.js-toDoList > li {
+  padding-bottom: 10px;
+}
+
+.js-toDoList span {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+input {
+  all: unset;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-bottom: 20px;
+}
+.js-toDoInput {
+  width: 800px !important;
+  height: 50px !important;
+}
+
+.basic-btn-style {
+  all: unset;
+  background-color: rgb(56, 155, 255);
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 2px 2px 2px 1px rgba(66, 122, 179, 0.8);
+}
+button:active {
+  box-shadow: unset;
+}
+
+.message {
+  width: 500px;
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+.bgImage {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 0.7;
+  z-index: -1;
+  animation: fadeIn 0.8s linear;
+}
+.js-weather {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  font-size: 20px;
+}
